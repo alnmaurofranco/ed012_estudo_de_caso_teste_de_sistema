@@ -1,0 +1,273 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 8,
+    "passes": 8,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-06-04T08:48:39.111Z",
+    "end": "2021-06-04T08:49:20.360Z",
+    "duration": 41249,
+    "testsRegistered": 8,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ed4191a6-2dc2-4843-b7ab-7bf43915c857",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "39f1b5bc-18c6-4adb-9fb6-ffd83d0164c2",
+          "title": "REQ01ManterLivrosTests",
+          "fullFile": "C:\\Users\\ALN\\Desktop\\typescript-with-tests-page-object\\tests\\REQ01CadastrarLivro.spec.ts",
+          "file": "\\tests\\REQ01CadastrarLivro.spec.ts",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"REQ01ManterLivrosTests\"",
+              "fullTitle": "REQ01ManterLivrosTests \"before all\" hook in \"REQ01ManterLivrosTests\"",
+              "timedOut": false,
+              "duration": 9910,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            return __generator(this, function (_a) {\n                switch (_a.label) {\n                    case 0: return [4 /*yield*/, new selenium_webdriver_1.Builder().forBrowser(\"chrome\").build()];\n                    case 1:\n                        driver = _a.sent();\n                        vars = {};\n                        return [4 /*yield*/, driver.get(\"https://ts-scel.herokuapp.com\")];\n                    case 2:\n                        _a.sent();\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "err": {},
+              "uuid": "7b0dd299-72b1-4442-ad42-e123ed97dc3b",
+              "parentUUID": "39f1b5bc-18c6-4adb-9fb6-ffd83d0164c2",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"REQ01ManterLivrosTests\"",
+              "fullTitle": "REQ01ManterLivrosTests \"after all\" hook in \"REQ01ManterLivrosTests\"",
+              "timedOut": false,
+              "duration": 443,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            return __generator(this, function (_a) {\n                switch (_a.label) {\n                    case 0: return [4 /*yield*/, driver.quit()];\n                    case 1:\n                        _a.sent();\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "err": {},
+              "uuid": "bdf02ecb-bd70-4fbf-9d8f-e29070ccb304",
+              "parentUUID": "39f1b5bc-18c6-4adb-9fb6-ffd83d0164c2",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "CT01CadastrarLivroComSucesso",
+              "fullTitle": "REQ01ManterLivrosTests CT01CadastrarLivroComSucesso",
+              "timedOut": false,
+              "duration": 6735,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var paginaLogin, paginaLivro, _a, _b;\n            return __generator(this, function (_c) {\n                switch (_c.label) {\n                    case 0:\n                        paginaLogin = new Login_1.Login(driver);\n                        return [4 /*yield*/, paginaLogin.efetuarLogin(\"jose\", \"123\")];\n                    case 1:\n                        _c.sent();\n                        paginaLivro = new Livro_1.Livro(driver);\n                        return [4 /*yield*/, paginaLivro.cadastrarLivro(\"9789\", \"Kent Beck\", \"TDD - Desenvolvimento Guiado Por Testes\")];\n                    case 2:\n                        _c.sent();\n                        return [4 /*yield*/, driver.sleep(2000)];\n                    case 3:\n                        _c.sent();\n                        _b = (_a = chai_1.expect(\"Lista de livros\").to).equal;\n                        return [4 /*yield*/, driver.findElement(selenium_webdriver_1.By.css(\".panel-heading\")).getText()];\n                    case 4:\n                        _b.apply(_a, [_c.sent()]);\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "err": {},
+              "uuid": "c8440b15-de9a-4608-9558-a9de9012caae",
+              "parentUUID": "39f1b5bc-18c6-4adb-9fb6-ffd83d0164c2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CT02CadastrarLivroComMesmosDados",
+              "fullTitle": "REQ01ManterLivrosTests CT02CadastrarLivroComMesmosDados",
+              "timedOut": false,
+              "duration": 3500,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var paginaLivro, _a, _b;\n            return __generator(this, function (_c) {\n                switch (_c.label) {\n                    case 0: return [4 /*yield*/, driver.findElement(selenium_webdriver_1.By.linkText(\"Voltar\")).click()];\n                    case 1:\n                        _c.sent();\n                        paginaLivro = new Livro_1.Livro(driver);\n                        return [4 /*yield*/, paginaLivro.cadastrarLivro(\"9789\", \"Kent Beck\", \"TDD - Desenvolvimento Guiado Por Testes\")];\n                    case 2:\n                        _c.sent();\n                        return [4 /*yield*/, driver.sleep(2000)];\n                    case 3:\n                        _c.sent();\n                        _b = (_a = chai_1.expect(\"Livro ja cadastrado\").to).equal;\n                        return [4 /*yield*/, driver.findElement(selenium_webdriver_1.By.css(\".text-danger\")).getText()];\n                    case 4:\n                        _b.apply(_a, [_c.sent()]);\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "err": {},
+              "uuid": "e5370aa8-86e0-46d2-8101-ca35f9ca70f0",
+              "parentUUID": "39f1b5bc-18c6-4adb-9fb6-ffd83d0164c2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CT03CadastrarLivroComISBNInvalido",
+              "fullTitle": "REQ01ManterLivrosTests CT03CadastrarLivroComISBNInvalido",
+              "timedOut": false,
+              "duration": 3463,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var paginaLivro, _a, _b;\n            return __generator(this, function (_c) {\n                switch (_c.label) {\n                    case 0: return [4 /*yield*/, driver.findElement(selenium_webdriver_1.By.linkText(\"Voltar\")).click()];\n                    case 1:\n                        _c.sent();\n                        paginaLivro = new Livro_1.Livro(driver);\n                        return [4 /*yield*/, paginaLivro.cadastrarLivro(\"9789727228645\", \"Kent Beck\", \"TDD - Desenvolvimento Guiado Por Testes\")];\n                    case 2:\n                        _c.sent();\n                        return [4 /*yield*/, driver.sleep(2000)];\n                    case 3:\n                        _c.sent();\n                        _b = (_a = chai_1.expect(\"ISBN deve ter 4 caracteres\").to).equal;\n                        return [4 /*yield*/, driver.findElement(selenium_webdriver_1.By.css(\".text-danger\")).getText()];\n                    case 4:\n                        _b.apply(_a, [_c.sent()]);\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "err": {},
+              "uuid": "5306d945-d437-40c9-8dfb-d4afa5830b8a",
+              "parentUUID": "39f1b5bc-18c6-4adb-9fb6-ffd83d0164c2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CT04CadastrarLivroComISBNVazio",
+              "fullTitle": "REQ01ManterLivrosTests CT04CadastrarLivroComISBNVazio",
+              "timedOut": false,
+              "duration": 3414,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var paginaLivro, _a, _b;\n            return __generator(this, function (_c) {\n                switch (_c.label) {\n                    case 0: return [4 /*yield*/, driver.findElement(selenium_webdriver_1.By.linkText(\"Voltar\")).click()];\n                    case 1:\n                        _c.sent();\n                        paginaLivro = new Livro_1.Livro(driver);\n                        return [4 /*yield*/, paginaLivro.cadastrarLivro(\"\", \"Kent Beck\", \"TDD - Desenvolvimento Guiado Por Testes\")];\n                    case 2:\n                        _c.sent();\n                        return [4 /*yield*/, driver.sleep(2000)];\n                    case 3:\n                        _c.sent();\n                        _b = (_a = chai_1.expect(\"ISBN deve ter 4 caracteres\").to).equal;\n                        return [4 /*yield*/, driver.findElement(selenium_webdriver_1.By.css(\".text-danger\")).getText()];\n                    case 4:\n                        _b.apply(_a, [_c.sent()]);\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "err": {},
+              "uuid": "a83e7943-ea7a-4473-8f2e-082dbff4425d",
+              "parentUUID": "39f1b5bc-18c6-4adb-9fb6-ffd83d0164c2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CT05CadastrarLivroComTituloInvalido",
+              "fullTitle": "REQ01ManterLivrosTests CT05CadastrarLivroComTituloInvalido",
+              "timedOut": false,
+              "duration": 3467,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var paginaLivro, _a, _b;\n            return __generator(this, function (_c) {\n                switch (_c.label) {\n                    case 0: return [4 /*yield*/, driver.findElement(selenium_webdriver_1.By.linkText(\"Voltar\")).click()];\n                    case 1:\n                        _c.sent();\n                        paginaLivro = new Livro_1.Livro(driver);\n                        return [4 /*yield*/, paginaLivro.cadastrarLivro(\"8577\", \"Luís Abreu\", \"Typescript. O Javascript Moderno Para Criação de Aplicações\")];\n                    case 2:\n                        _c.sent();\n                        return [4 /*yield*/, driver.sleep(2000)];\n                    case 3:\n                        _c.sent();\n                        _b = (_a = chai_1.expect(\"Titulo deve ter entre 1 e 50 caracteres\").to).equal;\n                        return [4 /*yield*/, driver.findElement(selenium_webdriver_1.By.css(\".text-danger\")).getText()];\n                    case 4:\n                        _b.apply(_a, [_c.sent()]);\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "err": {},
+              "uuid": "5873f2ff-c0d4-4a36-bc66-3f24f32a9e90",
+              "parentUUID": "39f1b5bc-18c6-4adb-9fb6-ffd83d0164c2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CT06CadastrarLivroComTituloVazio",
+              "fullTitle": "REQ01ManterLivrosTests CT06CadastrarLivroComTituloVazio",
+              "timedOut": false,
+              "duration": 3352,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var paginaLivro, _a, _b;\n            return __generator(this, function (_c) {\n                switch (_c.label) {\n                    case 0: return [4 /*yield*/, driver.findElement(selenium_webdriver_1.By.linkText(\"Voltar\")).click()];\n                    case 1:\n                        _c.sent();\n                        paginaLivro = new Livro_1.Livro(driver);\n                        return [4 /*yield*/, paginaLivro.cadastrarLivro(\"8577\", \"Luís Abreu\", \"\")];\n                    case 2:\n                        _c.sent();\n                        return [4 /*yield*/, driver.sleep(2000)];\n                    case 3:\n                        _c.sent();\n                        _b = (_a = chai_1.expect(\"Titulo deve ter entre 1 e 50 caracteres\").to).equal;\n                        return [4 /*yield*/, driver.findElement(selenium_webdriver_1.By.css(\".text-danger\")).getText()];\n                    case 4:\n                        _b.apply(_a, [_c.sent()]);\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "err": {},
+              "uuid": "7a96a7e3-02bf-4ed7-8003-229819f8626c",
+              "parentUUID": "39f1b5bc-18c6-4adb-9fb6-ffd83d0164c2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CT07CadastrarLivroComAutorInvalido",
+              "fullTitle": "REQ01ManterLivrosTests CT07CadastrarLivroComAutorInvalido",
+              "timedOut": false,
+              "duration": 3321,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var paginaLivro, _a, _b;\n            return __generator(this, function (_c) {\n                switch (_c.label) {\n                    case 0: return [4 /*yield*/, driver.findElement(selenium_webdriver_1.By.linkText(\"Voltar\")).click()];\n                    case 1:\n                        _c.sent();\n                        paginaLivro = new Livro_1.Livro(driver);\n                        return [4 /*yield*/, paginaLivro.cadastrarLivro(\"8577\", \"\", \"Typescript. O Javascript Moderno\")];\n                    case 2:\n                        _c.sent();\n                        return [4 /*yield*/, driver.sleep(2000)];\n                    case 3:\n                        _c.sent();\n                        _b = (_a = chai_1.expect(\"Autor deve ter entre 1 e 50 caracteres\").to).equal;\n                        return [4 /*yield*/, driver.findElement(selenium_webdriver_1.By.css(\".text-danger\")).getText()];\n                    case 4:\n                        _b.apply(_a, [_c.sent()]);\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "err": {},
+              "uuid": "680d1976-7220-4a02-99f4-aab15b86bcfe",
+              "parentUUID": "39f1b5bc-18c6-4adb-9fb6-ffd83d0164c2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CT08CadastrarLivroComAutorVazio",
+              "fullTitle": "REQ01ManterLivrosTests CT08CadastrarLivroComAutorVazio",
+              "timedOut": false,
+              "duration": 3608,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return __awaiter(void 0, void 0, void 0, function () {\n            var paginaLivro, _a, _b;\n            return __generator(this, function (_c) {\n                switch (_c.label) {\n                    case 0: return [4 /*yield*/, driver.findElement(selenium_webdriver_1.By.linkText(\"Voltar\")).click()];\n                    case 1:\n                        _c.sent();\n                        paginaLivro = new Livro_1.Livro(driver);\n                        return [4 /*yield*/, paginaLivro.cadastrarLivro(\"8577\", \"\", \"Typescript. O Javascript Moderno\")];\n                    case 2:\n                        _c.sent();\n                        return [4 /*yield*/, driver.sleep(2000)];\n                    case 3:\n                        _c.sent();\n                        _b = (_a = chai_1.expect(\"Autor deve ter entre 1 e 50 caracteres\").to).equal;\n                        return [4 /*yield*/, driver.findElement(selenium_webdriver_1.By.css(\".text-danger\")).getText()];\n                    case 4:\n                        _b.apply(_a, [_c.sent()]);\n                        return [2 /*return*/];\n                }\n            });\n        });",
+              "err": {},
+              "uuid": "18a4da90-b629-49e9-83f1-9c91f7f0001d",
+              "parentUUID": "39f1b5bc-18c6-4adb-9fb6-ffd83d0164c2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c8440b15-de9a-4608-9558-a9de9012caae",
+            "e5370aa8-86e0-46d2-8101-ca35f9ca70f0",
+            "5306d945-d437-40c9-8dfb-d4afa5830b8a",
+            "a83e7943-ea7a-4473-8f2e-082dbff4425d",
+            "5873f2ff-c0d4-4a36-bc66-3f24f32a9e90",
+            "7a96a7e3-02bf-4ed7-8003-229819f8626c",
+            "680d1976-7220-4a02-99f4-aab15b86bcfe",
+            "18a4da90-b629-49e9-83f1-9c91f7f0001d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 30860,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 100000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 100000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.4.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "test-results"
+      },
+      "version": "5.2.0"
+    }
+  }
+}
