@@ -1,4 +1,4 @@
-# **ED12 - Estudo de Caso - Teste de Sistema**
+# **ED012 - Estudo de Caso - Teste de Sistema**
 Testes automatizados na plataforma [Sistema de Controle de Empréstimo](https://ts-scel.herokuapp.com/) com uso do Page Object.
 
 <p align="center">
